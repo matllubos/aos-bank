@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite failures="1" time="3.502" errors="0" skipped="0" tests="5" name="bank.testadapter.generated.TestAdapterTest">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Libraries"/>
+    <property name="java.vm.version" value="20.4-b02-402"/>
+    <property name="awt.nativeDoubleBuffering" value="true"/>
+    <property name="gopherProxySet" value="false"/>
+    <property name="mrj.build" value="11M3527"/>
+    <property name="java.vm.vendor" value="Apple Inc."/>
+    <property name="java.vendor.url" value="http://www.apple.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="CZ"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="test" value="bank.testadapter.generated.TestAdapterTest"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter"/>
+    <property name="java.runtime.version" value="1.6.0_29-b11-402-11M3527"/>
+    <property name="java.awt.graphicsenv" value="apple.awt.CGraphicsEnvironment"/>
+    <property name="basedir" value="/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter"/>
+    <property name="java.endorsed.dirs" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/endorsed"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="surefire.real.class.path" value="/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/surefire/surefirebooter1487967906663948822.jar"/>
+    <property name="java.io.tmpdir" value="/var/folders/5q/3nxt995s6hvc41vl5wqn3tp00000gn/T/"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.jnu.encoding" value="MacCentralEurope"/>
+    <property name="java.library.path" value=".:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java"/>
+    <property name="surefire.test.class.path" value="/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/test-classes:/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/classes:/Users/lubos/.m2/repository/javax/javaee-web-api/6.0/javaee-web-api-6.0.jar:/Users/lubos/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:/Users/lubos/.m2/repository/org/springframework/spring-core/3.0.6.RELEASE/spring-core-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/springframework/spring-asm/3.0.6.RELEASE/spring-asm-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/lubos/.m2/repository/org/springframework/spring-beans/3.0.6.RELEASE/spring-beans-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/springframework/spring-context/3.0.6.RELEASE/spring-context-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/springframework/spring-aop/3.0.6.RELEASE/spring-aop-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/lubos/.m2/repository/org/springframework/spring-expression/3.0.6.RELEASE/spring-expression-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/2.4.2/cxf-rt-frontend-jaxws-2.4.2.jar:/Users/lubos/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar:/Users/lubos/.m2/repository/asm/asm/3.3/asm-3.3.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-api/2.4.2/cxf-api-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-common-utilities/2.4.2/cxf-common-utilities-2.4.2.jar:/Users/lubos/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.1.1/woodstox-core-asl-4.1.1.jar:/Users/lubos/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.1/stax2-api-3.1.1.jar:/Users/lubos/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.0/xmlschema-core-2.0.jar:/Users/lubos/.m2/repository/org/apache/neethi/neethi/3.0.1/neethi-3.0.1.jar:/Users/lubos/.m2/repository/wsdl4j/wsdl4j/1.6.2/wsdl4j-1.6.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-core/2.4.2/cxf-rt-core-2.4.2.jar:/Users/lubos/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-impl-2.1.13.jar:/Users/lubos/.m2/repository/org/apache/geronimo/specs/geronimo-javamail_1.4_spec/1.7.1/geronimo-javamail_1.4_spec-1.7.1.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/2.4.2/cxf-rt-bindings-soap-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-tools-common/2.4.2/cxf-tools-common-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/2.4.2/cxf-rt-databinding-jaxb-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/2.4.2/cxf-rt-bindings-xml-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/2.4.2/cxf-rt-frontend-simple-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/2.4.2/cxf-rt-ws-addr-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-transports-http/2.4.2/cxf-rt-transports-http-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-transports-common/2.4.2/cxf-rt-transports-common-2.4.2.jar:/Users/lubos/.m2/repository/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar:"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="50.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.7.2"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="user.home" value="/Users/lubos"/>
+    <property name="user.timezone" value="Europe/Prague"/>
+    <property name="java.awt.printerjob" value="apple.awt.CPrinterJob"/>
+    <property name="java.specification.version" value="1.6"/>
+    <property name="file.encoding" value="MacCentralEurope"/>
+    <property name="user.name" value="lubos"/>
+    <property name="java.class.path" value="/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/test-classes:/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/classes:/Users/lubos/.m2/repository/javax/javaee-web-api/6.0/javaee-web-api-6.0.jar:/Users/lubos/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar:/Users/lubos/.m2/repository/org/springframework/spring-core/3.0.6.RELEASE/spring-core-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/springframework/spring-asm/3.0.6.RELEASE/spring-asm-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar:/Users/lubos/.m2/repository/org/springframework/spring-beans/3.0.6.RELEASE/spring-beans-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/springframework/spring-context/3.0.6.RELEASE/spring-context-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/springframework/spring-aop/3.0.6.RELEASE/spring-aop-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/lubos/.m2/repository/org/springframework/spring-expression/3.0.6.RELEASE/spring-expression-3.0.6.RELEASE.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-frontend-jaxws/2.4.2/cxf-rt-frontend-jaxws-2.4.2.jar:/Users/lubos/.m2/repository/xml-resolver/xml-resolver/1.2/xml-resolver-1.2.jar:/Users/lubos/.m2/repository/asm/asm/3.3/asm-3.3.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-api/2.4.2/cxf-api-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-common-utilities/2.4.2/cxf-common-utilities-2.4.2.jar:/Users/lubos/.m2/repository/org/codehaus/woodstox/woodstox-core-asl/4.1.1/woodstox-core-asl-4.1.1.jar:/Users/lubos/.m2/repository/org/codehaus/woodstox/stax2-api/3.1.1/stax2-api-3.1.1.jar:/Users/lubos/.m2/repository/org/apache/ws/xmlschema/xmlschema-core/2.0/xmlschema-core-2.0.jar:/Users/lubos/.m2/repository/org/apache/neethi/neethi/3.0.1/neethi-3.0.1.jar:/Users/lubos/.m2/repository/wsdl4j/wsdl4j/1.6.2/wsdl4j-1.6.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-core/2.4.2/cxf-rt-core-2.4.2.jar:/Users/lubos/.m2/repository/com/sun/xml/bind/jaxb-impl/2.1.13/jaxb-impl-2.1.13.jar:/Users/lubos/.m2/repository/org/apache/geronimo/specs/geronimo-javamail_1.4_spec/1.7.1/geronimo-javamail_1.4_spec-1.7.1.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-bindings-soap/2.4.2/cxf-rt-bindings-soap-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-tools-common/2.4.2/cxf-tools-common-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-databinding-jaxb/2.4.2/cxf-rt-databinding-jaxb-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-bindings-xml/2.4.2/cxf-rt-bindings-xml-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-frontend-simple/2.4.2/cxf-rt-frontend-simple-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-ws-addr/2.4.2/cxf-rt-ws-addr-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-transports-http/2.4.2/cxf-rt-transports-http-2.4.2.jar:/Users/lubos/.m2/repository/org/apache/cxf/cxf-rt-transports-common/2.4.2/cxf-rt-transports-common-2.4.2.jar:/Users/lubos/.m2/repository/org/springframework/spring-web/3.0.5.RELEASE/spring-web-3.0.5.RELEASE.jar:"/>
+    <property name="java.vm.specification.version" value="1.0"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>
+    <property name="sun.java.command" value="/Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/surefire/surefirebooter1487967906663948822.jar /Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/surefire/surefire5817879070501340703tmp /Users/lubos/Workspace/School/mgr/AOS/semestralka/TestAdapter/target/surefire/surefire4607367841362753159tmp"/>
+    <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
+    <property name="user.language" value="cs"/>
+    <property name="awt.toolkit" value="apple.awt.CToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.6.0_29"/>
+    <property name="java.ext.dirs" value="/Library/Java/Extensions:/System/Library/Java/Extensions:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home/lib/ext"/>
+    <property name="sun.boot.class.path" value="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsfd.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar:/System/Library/Frameworks/JavaVM.framework/Frameworks/JavaRuntimeSupport.framework/Resources/Java/JavaRuntimeSupport.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/ui.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/laf.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/sunrsasign.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jsse.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/jce.jar:/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/charsets.jar"/>
+    <property name="java.vendor" value="Apple Inc."/>
+    <property name="localRepository" value="/Users/lubos/.m2/repository"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.apple.com/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="mrj.version" value="1070.1.6.0_29-402"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase time="1.22" classname="bank.testadapter.generated.TestAdapterTest" name="testDepositMoney">
+    <failure message="The test case is a prototype." type="java.lang.AssertionError">java.lang.AssertionError: The test case is a prototype.
+	at org.junit.Assert.fail(Assert.java:91)
+	at bank.testadapter.generated.TestAdapterTest.testDepositMoney(TestAdapterTest.java:59)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.BlockJUnit4ClassRunner.runNotIgnored(BlockJUnit4ClassRunner.java:79)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:71)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:49)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:31)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:35)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:115)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:97)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.maven.surefire.booter.ProviderFactory$ClassLoaderProxy.invoke(ProviderFactory.java:103)
+	at $Proxy0.invoke(Unknown Source)
+	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:150)
+	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcess(SurefireStarter.java:91)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:69)
+</failure>
+    <system-out>@HL
+@HL-------------------------------------------------------
+@HL T E S T S
+@HL-------------------------------------------------------
+@SLRunning bank.testadapter.generated.TestAdapterTest
+depositMoney
+</system-out>
+    <system-err>20.12.2011 18:52:05 org.apache.cxf.service.factory.ReflectionServiceFactoryBean buildServiceFromWSDL
+INFO: Creating Service {http://client/}Client from WSDL: http://localhost:8080/bank/Client?wsdl
+</system-err>
+  </testcase>
+  <testcase time="2.159" classname="bank.testadapter.generated.TestAdapterTest" name="testSetUpAccount"/>
+  <testcase time="0.024" classname="bank.testadapter.generated.TestAdapterTest" name="testWithdrawMoney"/>
+  <testcase time="0.021" classname="bank.testadapter.generated.TestAdapterTest" name="testGetAccountStatement"/>
+  <testcase time="0.018" classname="bank.testadapter.generated.TestAdapterTest" name="testTransferMoney"/>
+</testsuite>
