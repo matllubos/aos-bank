@@ -1,0 +1,249 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://client/" xmlns:ns1="http://backend/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://client/">
+
+<xs:import namespace="http://backend/" schemaLocation="http://localhost:8080/bank/Client?xsd=2"/>
+
+<xs:element name="ClientException" type="tns:ClientException"/>
+
+<xs:element name="createAccount" type="tns:createAccount"/>
+
+<xs:element name="createAccountResponse" type="tns:createAccountResponse"/>
+
+<xs:element name="createLoan" type="tns:createLoan"/>
+
+<xs:element name="createLoanResponse" type="tns:createLoanResponse"/>
+
+<xs:element name="depositMoney" type="tns:depositMoney"/>
+
+<xs:element name="depositMoneyResponse" type="tns:depositMoneyResponse"/>
+
+<xs:element name="existAccount" type="tns:existAccount"/>
+
+<xs:element name="existAccountResponse" type="tns:existAccountResponse"/>
+
+<xs:element name="getAccountStatement" type="tns:getAccountStatement"/>
+
+<xs:element name="getAccountStatementResponse" type="tns:getAccountStatementResponse"/>
+
+<xs:element name="getCurrentBalance" type="tns:getCurrentBalance"/>
+
+<xs:element name="getCurrentBalanceResponse" type="tns:getCurrentBalanceResponse"/>
+
+<xs:element name="getInterestRate" type="tns:getInterestRate"/>
+
+<xs:element name="getInterestRateResponse" type="tns:getInterestRateResponse"/>
+
+<xs:element name="getLoans" type="tns:getLoans"/>
+
+<xs:element name="getLoansResponse" type="tns:getLoansResponse"/>
+
+<xs:element name="getTransactions" type="tns:getTransactions"/>
+
+<xs:element name="getTransactionsResponse" type="tns:getTransactionsResponse"/>
+
+<xs:element name="isSupportedCurrency" type="tns:isSupportedCurrency"/>
+
+<xs:element name="isSupportedCurrencyResponse" type="tns:isSupportedCurrencyResponse"/>
+
+<xs:element name="paidLoan" type="tns:paidLoan"/>
+
+<xs:element name="paidLoanResponse" type="tns:paidLoanResponse"/>
+
+<xs:element name="paidPayment" type="tns:paidPayment"/>
+
+<xs:element name="paidPaymentResponse" type="tns:paidPaymentResponse"/>
+
+<xs:element name="transferMoney" type="tns:transferMoney"/>
+
+<xs:element name="transferMoneyResponse" type="tns:transferMoneyResponse"/>
+
+<xs:element name="withdrawMoney" type="tns:withdrawMoney"/>
+
+<xs:element name="withdrawMoneyResponse" type="tns:withdrawMoneyResponse"/>
+
+<xs:complexType name="getInterestRate">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getInterestRateResponse">
+<xs:sequence>
+<xs:element name="interestRate" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ClientException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="transferMoney">
+<xs:sequence>
+<xs:element name="myAccount" type="xs:int"/>
+<xs:element name="targetAccount" type="xs:int"/>
+<xs:element name="targetBank" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:decimal" minOccurs="0"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="transferMoneyResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCurrentBalance">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCurrentBalanceResponse">
+<xs:sequence>
+<xs:element name="balance" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="withdrawMoney">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+<xs:element name="amount" type="xs:decimal" minOccurs="0"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="withdrawMoneyResponse">
+<xs:sequence>
+<xs:element name="currentBalance" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existAccount">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="existAccountResponse">
+<xs:sequence>
+<xs:element name="existAccountResponse" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoans">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLoansResponse">
+<xs:sequence>
+<xs:element name="loans" type="ns1:loanData" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createAccount">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createAccountResponse">
+<xs:sequence>
+<xs:element name="createAccount" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="paidLoan">
+<xs:sequence>
+<xs:element name="loanNumber" type="xs:int"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="paidLoanResponse">
+<xs:sequence>
+<xs:element name="remainMoney" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAccountStatement">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAccountStatementResponse">
+<xs:sequence>
+<xs:element name="getAccouljntStatementResponse" type="xs:base64Binary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSupportedCurrency">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isSupportedCurrencyResponse">
+<xs:sequence>
+<xs:element name="isSupportedCurrencyResult" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="depositMoney">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+<xs:element name="amount" type="xs:decimal" minOccurs="0"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="depositMoneyResponse">
+<xs:sequence>
+<xs:element name="currentBalance" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createLoan">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:decimal" minOccurs="0"/>
+<xs:element name="months" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createLoanResponse">
+<xs:sequence>
+<xs:element name="loanNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="paidPayment">
+<xs:sequence>
+<xs:element name="loanNumber" type="xs:int"/>
+<xs:element name="currency" type="xs:string" minOccurs="0"/>
+<xs:element name="amount" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="paidPaymentResponse">
+<xs:sequence>
+<xs:element name="remainMoney" type="xs:decimal" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTransactions">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getTransactionsResponse">
+<xs:sequence>
+<xs:element name="transactions" type="ns1:transactionLogData" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

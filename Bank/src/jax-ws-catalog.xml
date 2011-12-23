@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://support.felk.cvut.cz/aos/sw/ClearingCenter?wsdl" uri="wsdl/support.felk.cvut.cz/aos/sw/ClearingCenter.wsdl"/>
+    <system systemId="http://support.felk.cvut.cz/aos/sw/ClearingCenter?wsdl=ClearingCenter.wsdl" uri="wsdl/support.felk.cvut.cz/aos/sw/ClearingCenter.wsdl_ClearingCenter.wsdl"/>
+    <system systemId="http://support.felk.cvut.cz/aos/sw/ExchangeRates?wsdl" uri="wsdl/support.felk.cvut.cz/aos/sw/ExchangeRates.wsdl"/>
+    <system systemId="http://support.felk.cvut.cz/aos/sw/ExchangeRates?wsdl=ExchangeRates.wsdl" uri="wsdl/support.felk.cvut.cz/aos/sw/ExchangeRates.wsdl_ExchangeRates.wsdl"/>
+    <system systemId="http://localhost:8080/bank/Clearing?wsdl" uri="wsdl/localhost_8080/bank/Clearing.wsdl"/>
+    <system systemId="http://localhost:8080/bank/Clearing?xsd=1" uri="wsdl/localhost_8080/bank/Clearing.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/bank/Backend?wsdl" uri="wsdl/localhost_8080/bank/Backend.wsdl"/>
+    <system systemId="http://localhost:8080/bank/Backend?xsd=1" uri="wsdl/localhost_8080/bank/Backend.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/bank/Fileserver?wsdl" uri="wsdl/localhost_8080/bank/Fileserver.wsdl"/>
+    <system systemId="http://localhost:8080/bank/Fileserver?xsd=1" uri="wsdl/localhost_8080/bank/Fileserver.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/bank/Scoring?wsdl" uri="wsdl/localhost_8080/bank/Scoring.wsdl"/>
+    <system systemId="http://localhost:8080/bank/Scoring?xsd=1" uri="wsdl/localhost_8080/bank/Scoring.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/bank/Client?wsdl" uri="wsdl/localhost_8080/bank/Client.wsdl"/>
+    <system systemId="http://localhost:8080/bank/Client?xsd=1" uri="wsdl/localhost_8080/bank/Client.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/bank/Client?xsd=2" uri="wsdl/localhost_8080/bank/Client.xsd_2.xsd"/>
+</catalog>

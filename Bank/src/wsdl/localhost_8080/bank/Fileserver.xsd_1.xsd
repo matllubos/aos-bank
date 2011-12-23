@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is Metro/2.1.1-b09 (branches/2.1-6834; 2011-07-16T17:14:48+0000) JAXWS-RI/2.2.5-promoted-b04 JAXWS/2.2. --><xs:schema xmlns:tns="http://fileserver/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://fileserver/">
+
+<xs:element name="FileException" type="tns:FileException"/>
+
+<xs:element name="getPrintout" type="tns:getPrintout"/>
+
+<xs:element name="getPrintoutResponse" type="tns:getPrintoutResponse"/>
+
+<xs:complexType name="getPrintout">
+<xs:sequence>
+<xs:element name="accountNumber" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getPrintoutResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:base64Binary" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="FileException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="ClearingCenter" targetNamespace="http://support.felk.cvut.cz/aos/sw/ClearingCenter/" xmlns:ns1="http://support.felk.cvut.cz/aos/sw/ClearingCenter/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://support.felk.cvut.cz/aos/sw/ClearingCenter/" xmlns:tns="http://support.felk.cvut.cz/aos/sw/ClearingCenter/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="fetchPayments" type="tns:fetchPayments"/>
+  <xs:element name="fetchPaymentsFault">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fetchPaymentsFault" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fetchPaymentsResponse" type="tns:fetchPaymentsResponse"/>
+  <xs:element name="getPaymentsResult" type="tns:getPaymentsResult"/>
+  <xs:element name="getPaymentsResultFault">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="getPaymentsResultFault" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getPaymentsResultResponse" type="tns:getPaymentsResultResponse"/>
+  <xs:element name="register" type="tns:register"/>
+  <xs:element name="registerFault">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="registerFault" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="registerResponse" type="tns:registerResponse"/>
+  <xs:element name="sendPayments" type="tns:sendPayments"/>
+  <xs:element name="sendPaymentsFault">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sendPaymentsFault" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="sendPaymentsResponse" type="tns:sendPaymentsResponse"/>
+  <xs:element name="setPaymentsResult" type="tns:setPaymentsResult"/>
+  <xs:element name="setPaymentsResultFault">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="setPaymentsResultFault" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setPaymentsResultResponse" type="tns:setPaymentsResultResponse"/>
+  <xs:complexType name="getPaymentsResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankKey" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="paymentIds" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getPaymentsResultResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="payment">
+    <xs:sequence>
+      <xs:element name="accountNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="amount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="bankCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="currency" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="paymentResult" type="tns:paymentResult"/>
+      <xs:element name="senderAccountNumber" type="xs:int"/>
+      <xs:element minOccurs="0" name="senderBankCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPaymentsResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankKey" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="paymentsWithResults" nillable="true" type="tns:payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="setPaymentsResultResponse">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="fetchPayments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankKey" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="fetchPaymentsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendPayments">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankKey" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="payments" nillable="true" type="tns:payment"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sendPaymentsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="register">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bankCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registerResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="paymentResult">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOTSET"/>
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="WAITING_FOR_TARGET_BANK_PROCESSING"/>
+      <xs:enumeration value="NO_SUCH_TARGET_ACCOUNT_ERROR"/>
+      <xs:enumeration value="UNKNOWN_ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="GetPaymentsResultFault_Exception">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="GetPaymentsResultFault_Exception" type="tns:GetPaymentsResultFault_Exception"/>
+  <xs:complexType name="SetPaymentsResultFault_Exception">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="SetPaymentsResultFault_Exception" type="tns:SetPaymentsResultFault_Exception"/>
+  <xs:complexType name="FetchPaymentsFault_Exception">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="FetchPaymentsFault_Exception" type="tns:FetchPaymentsFault_Exception"/>
+  <xs:complexType name="SendPaymentsFault_Exception">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="SendPaymentsFault_Exception" type="tns:SendPaymentsFault_Exception"/>
+  <xs:complexType name="RegisterFault_Exception">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="RegisterFault_Exception" type="tns:RegisterFault_Exception"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPaymentsResultFault_Exception">
+    <wsdl:part element="ns1:GetPaymentsResultFault_Exception" name="GetPaymentsResultFault_Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendPaymentsFault_Exception">
+    <wsdl:part element="ns1:SendPaymentsFault_Exception" name="SendPaymentsFault_Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchPayments">
+    <wsdl:part element="ns1:fetchPayments" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="registerResponse">
+    <wsdl:part element="ns1:registerResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="RegisterFault_Exception">
+    <wsdl:part element="ns1:RegisterFault_Exception" name="RegisterFault_Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="register">
+    <wsdl:part element="ns1:register" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="FetchPaymentsFault_Exception">
+    <wsdl:part element="ns1:FetchPaymentsFault_Exception" name="FetchPaymentsFault_Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendPayments">
+    <wsdl:part element="ns1:sendPayments" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendPaymentsResponse">
+    <wsdl:part element="ns1:sendPaymentsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPaymentsResultResponse">
+    <wsdl:part element="ns1:getPaymentsResultResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchPaymentsResponse">
+    <wsdl:part element="ns1:fetchPaymentsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setPaymentsResultResponse">
+    <wsdl:part element="ns1:setPaymentsResultResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setPaymentsResult">
+    <wsdl:part element="ns1:setPaymentsResult" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SetPaymentsResultFault_Exception">
+    <wsdl:part element="ns1:SetPaymentsResultFault_Exception" name="SetPaymentsResultFault_Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPaymentsResult">
+    <wsdl:part element="ns1:getPaymentsResult" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ClearingCenter">
+    <wsdl:operation name="getPaymentsResult">
+      <wsdl:input message="ns1:getPaymentsResult" name="getPaymentsResult">
+    </wsdl:input>
+      <wsdl:output message="ns1:getPaymentsResultResponse" name="getPaymentsResultResponse">
+    </wsdl:output>
+      <wsdl:fault message="ns1:GetPaymentsResultFault_Exception" name="GetPaymentsResultFault_Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="setPaymentsResult">
+      <wsdl:input message="ns1:setPaymentsResult" name="setPaymentsResult">
+    </wsdl:input>
+      <wsdl:output message="ns1:setPaymentsResultResponse" name="setPaymentsResultResponse">
+    </wsdl:output>
+      <wsdl:fault message="ns1:SetPaymentsResultFault_Exception" name="SetPaymentsResultFault_Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="fetchPayments">
+      <wsdl:input message="ns1:fetchPayments" name="fetchPayments">
+    </wsdl:input>
+      <wsdl:output message="ns1:fetchPaymentsResponse" name="fetchPaymentsResponse">
+    </wsdl:output>
+      <wsdl:fault message="ns1:FetchPaymentsFault_Exception" name="FetchPaymentsFault_Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="sendPayments">
+      <wsdl:input message="ns1:sendPayments" name="sendPayments">
+    </wsdl:input>
+      <wsdl:output message="ns1:sendPaymentsResponse" name="sendPaymentsResponse">
+    </wsdl:output>
+      <wsdl:fault message="ns1:SendPaymentsFault_Exception" name="SendPaymentsFault_Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="register">
+      <wsdl:input message="ns1:register" name="register">
+    </wsdl:input>
+      <wsdl:output message="ns1:registerResponse" name="registerResponse">
+    </wsdl:output>
+      <wsdl:fault message="ns1:RegisterFault_Exception" name="RegisterFault_Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

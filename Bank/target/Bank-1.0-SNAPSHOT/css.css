@@ -1,0 +1,103 @@
+/* 
+    Document   : css
+    Created on : 19.12.2011, 18:56:37
+    Author     : lubos
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+html {
+    width: 100%;
+    height: 100%;
+    
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.left {
+    float:left;
+    width: 20%;
+    height: 100%;
+    background: #bfcfd4;
+    margin-right:  20px;
+}
+
+.left a {
+    display: block;
+    margin: 20px;
+    
+}
+
+
+form {
+    width: 240px;
+    margin: 40px auto;
+    background: #bfcfd4;
+    padding: 10px 20px;
+}
+
+form label {
+    float: left;
+    width: 120px;
+    margin: 0 10px;
+}
+
+input {
+    width: 90px;
+}
+
+input.button {
+    width: 100px;
+    margin-left: 50px;
+}
+
+div.ballance {
+    width: 300px;
+    margin: 50px auto;
+    border: 2px solid black;
+    padding: 10px;
+    font-weight: bold;
+    
+}
+
+
+table {
+    margin: 20px;
+    border-collapse: collapse;
+}
+
+table tr td {
+    padding: 5px;
+}
+
+table tr.odd td{
+    background: #bfcfd4;
+}
+
+form.transfer {
+    width: 340px;
+}
+
+p.error {
+    border: 1px solid red;
+    background: pink;
+    color: red;
+    padding: 5px;
+}
+
+p.sucess {
+    border: 1px solid green;
+    background: palegreen;
+    color: green;
+    padding: 5px;
+    
+}

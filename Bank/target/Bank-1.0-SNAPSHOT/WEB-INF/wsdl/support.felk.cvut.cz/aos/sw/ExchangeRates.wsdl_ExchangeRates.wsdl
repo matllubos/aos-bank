@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="ExchangeRates" targetNamespace="http://support.felk.cvut.cz/aos/sw/ExchangeRates/" xmlns:ns1="http://support.felk.cvut.cz/aos/sw/ExchangeRates/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://support.felk.cvut.cz/aos/sw/ExchangeRates/" xmlns="http://support.felk.cvut.cz/aos/sw/ExchangeRates/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getExchangeRate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fromCurrency" type="xs:string"/>
+        <xs:element name="toCurrency" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getExchangeRateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="rate" type="xs:decimal"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSupportedCurrencies">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getSupportedCurrenciesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="currencyCodes" nillable="true" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="UnsupportedCurrencyFault">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:element name="UnsupportedCurrencyFault" type="UnsupportedCurrencyFault"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getSupportedCurrenciesResponse">
+    <wsdl:part element="ns1:getSupportedCurrenciesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExchangeRateResponse">
+    <wsdl:part element="ns1:getExchangeRateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getSupportedCurrencies">
+    <wsdl:part element="ns1:getSupportedCurrencies" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getExchangeRate">
+    <wsdl:part element="ns1:getExchangeRate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="UnsupportedCurrencyFault">
+    <wsdl:part element="ns1:UnsupportedCurrencyFault" name="UnsupportedCurrencyFault">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ExchangeRates">
+    <wsdl:operation name="getSupportedCurrencies">
+      <wsdl:input message="ns1:getSupportedCurrencies" name="getSupportedCurrencies">
+    </wsdl:input>
+      <wsdl:output message="ns1:getSupportedCurrenciesResponse" name="getSupportedCurrenciesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExchangeRate">
+      <wsdl:input message="ns1:getExchangeRate" name="getExchangeRate">
+    </wsdl:input>
+      <wsdl:output message="ns1:getExchangeRateResponse" name="getExchangeRateResponse">
+    </wsdl:output>
+      <wsdl:fault message="ns1:UnsupportedCurrencyFault" name="UnsupportedCurrencyFault">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
